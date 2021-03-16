@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		knights
 Summary:	knights
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	bafcf61dafce4155e2fb8895080682be
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	0801bfc6d1787263599f01e5b0becb7b
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -68,8 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/knights.categories
-/etc/xdg/knights.knsrc
 %attr(755,root,root) %{_bindir}/knights
 %{_desktopdir}/org.kde.knights.desktop
 %{_datadir}/config.kcfg/knights.kcfg
@@ -81,3 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/knights
 %{_datadir}/kxmlgui5/knights
 %{_datadir}/metainfo/org.kde.knights.appdata.xml
+%{_datadir}/qlogging-categories5/knights.categories
+%{_datadir}/knsrcfiles/knights.knsrc
