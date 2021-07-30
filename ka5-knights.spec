@@ -44,6 +44,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 KNights is a chess game. As a player, your goal is to defeat your
 opponent by checkmating their king.
 
+%description -l pl.UTF-8
+KNights to gra w szachy. Celem gracza jest dać mata królowi
+przeciwnika.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
